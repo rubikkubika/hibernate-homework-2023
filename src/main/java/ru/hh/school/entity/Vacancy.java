@@ -15,6 +15,7 @@ public class Vacancy {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "employer_id")
   private Employer employer;
+
   @OneToOne(cascade = {CascadeType.MERGE,
       CascadeType.PERSIST,
       CascadeType.REFRESH,
@@ -33,8 +34,10 @@ public class Vacancy {
 
   @Column(name = "compensation_gross")
   private Boolean compensationGross;
+
   @Column(name = "creation_time")
   private LocalDateTime creationTime;
+
   @Column(name = "archiving_time")
   private LocalDateTime archivingTime;
 

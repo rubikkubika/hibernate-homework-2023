@@ -17,6 +17,7 @@ public class Resume {
   @SequenceGenerator(name = "resume_id_seq",allocationSize = 1)
   @Column(name = "id")
   private Integer id;
+
   @Column(name = "description")
   private String description;
 
