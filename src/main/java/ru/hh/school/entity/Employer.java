@@ -16,16 +16,20 @@ public class Employer {
   private Integer id;
   @Column(name = "company_name")
   private String companyName;
+
   @Column(name = "creation_time")
   // не используйте java.util.Date
   // https://docs.jboss.org/hibernate/orm/5.3/userguide/html_single/Hibernate_User_Guide.html#basic-datetime-java8
   private LocalDateTime creationTime;
+
+
   @OneToMany(
       mappedBy = "employer",
       cascade = {CascadeType.ALL},
-      orphanRemoval = true
-  )
+      orphanRemoval = true)
   private List<Vacancy> vacancies = new ArrayList<>();
+
+
   @Column(name = "block_time")
   private LocalDateTime blockTime;
 
