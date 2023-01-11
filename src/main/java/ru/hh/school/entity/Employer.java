@@ -22,11 +22,13 @@ public class Employer {
   // https://docs.jboss.org/hibernate/orm/5.3/userguide/html_single/Hibernate_User_Guide.html#basic-datetime-java8
   private LocalDateTime creationTime;
 
+
   @OneToMany(
       mappedBy = "employer",
       cascade = {CascadeType.ALL},
       orphanRemoval = true)
   private List<Vacancy> vacancies = new ArrayList<>();
+
 
   @Column(name = "block_time")
   private LocalDateTime blockTime;

@@ -12,6 +12,7 @@ public class Area {
 
   private String name;
 
+
   public String getName() {
     return name;
   }

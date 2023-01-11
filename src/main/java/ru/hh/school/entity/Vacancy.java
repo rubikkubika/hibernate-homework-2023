@@ -38,6 +38,7 @@ public class Vacancy {
   @Column(name = "creation_time")
   private LocalDateTime creationTime;
 
+
   @Column(name = "archiving_time")
   private LocalDateTime archivingTime;
 
